@@ -1,0 +1,48 @@
+.home {
+    color : white;
+    display: flex;
+    flex-direction: row;
+}
+
+.home-left {
+    background-color: #130858;
+    padding: 15px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    padding-right: 100px;
+}
+
+.home-right {
+    background-color: #030112;
+    padding: 15px;
+    width: 30%;
+}
+
+.pict {
+    height : 230px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.description {
+    margin-top: 50px;
+}
+
+.nom{
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    .home {
+      flex-direction: column;
+    }
+    .home-left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .home-right {
+        width: 100%;
+    }
+  }
