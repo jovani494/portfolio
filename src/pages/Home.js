@@ -1,10 +1,17 @@
 import { Component } from "react";
 import './Home.css';
 import photo from "../photo.jpeg";
+import { FaLinkedin , FaFacebook , FaGithub  } from "react-icons/fa";
 
 class Home extends Component{
     state = {
-        naissance : 2002
+        naissance : 2002,
+        links : [
+            {name : "Linkedin" , icon : <FaLinkedin /> , lien : "https://www.linkedin.com/in/jovani-ravelonarivo-005444225/" } ,
+            {name : "GitHub" , icon : <FaGithub /> , lien : "https://github.com/jovani494" } ,
+            {name : "Facebook" , icon : <FaFacebook /> , lien : "https://www.facebook.com/profile.php?id=100066685957313&mibextid=ZbWKwL" } ,
+            
+        ]
     }
  
     render(){
@@ -27,7 +34,13 @@ class Home extends Component{
                 </div>
 
                 <div className="home-right">
-                    s
+                    {this.state.links.map((link,index) => {
+                        return(
+                            <div key={index} className="profile">
+                                <a className="link_name" href={link.lien}><span>{link.icon}</span> {link.name}</a>
+                            </div>
+                        ) 
+                    })}
                 </div>
             </div>
         )

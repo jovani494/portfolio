@@ -9,7 +9,7 @@ class Message extends Component{
         return(
             <div className="message">
                 <form onSubmit={this.submitMessage}>
-                    <button type="submit">Submit</button>
+                    <input type="submit" value="Envoyer"/>
                 </form>
             </div>
         )

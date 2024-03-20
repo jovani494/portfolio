@@ -1,14 +1,20 @@
 import { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { IoClose, IoMenu, IoHome } from "react-icons/io5";
+import { FaTasks } from "react-icons/fa";
+import { VscBeaker } from "react-icons/vsc";
+import { PiCertificateFill } from "react-icons/pi";
+import { MdForwardToInbox } from "react-icons/md";
+import "./Navbar.css"
 
 class NavBar extends Component{
     state = {
         pages : [
-          { name : "Home", link : "/" } ,
-          { name : "Projects", link : "/projects" } ,
-          { name : "Skills" , link : "/skills"} ,
-          { name : "Certificate" , link : "/certificate"} ,
-          { name : "Message" , link : "/message"} ,
+          { name : "Home", link : "/", icon : <IoHome  />} ,
+          { name : "Projects", link : "/projects", icon : <FaTasks /> } ,
+          { name : "Skills" , link : "/skills" , icon : <VscBeaker />} ,
+          { name : "Certificate" , link : "/certificate" , icon : <PiCertificateFill />} ,
+          { name : "Message" , link : "/message" , icon : <MdForwardToInbox />} ,
         ],
         viewList : false, 
       }
@@ -28,17 +34,29 @@ class NavBar extends Component{
     render(){
         return(
             <div className="navbar">
-              <ul>
-                {this.state.pages.map( (page, index) => {
-                    return(
-                      <li key={index} className="nav__item">
-                        <NavLink to={page.link} className="nav__link">
-                          {page.name}
-                        </NavLink>
-                      </li>
-                    )
-                  })}
-              </ul>
+              { this.state.viewList? 
+                (
+                  <div className="navlink">
+                    <button onClick={this.hideList} className="nav__close"><IoClose /></button>
+                      <ul className="list-items">
+                        {this.state.pages.map((page, index) => {
+                            return(
+                              <li key={index} className="nav__item">
+                                <NavLink to={page.link} className="nav__link">
+                                  <div className="item">
+                                    <div className="icon">{page.icon}</div><div className="name">{page.name}</div>
+                                  </div> 
+                                </NavLink>
+                              </li>
+                            )
+                          })}
+                      </ul>
+                  </div>
+                ) : (
+                  <div className="see">
+                    <button onClick={this.viewList} className="nav__toggle"><IoMenu /></button>
+                  </div>
+                ) }
             </div>
         )
     }

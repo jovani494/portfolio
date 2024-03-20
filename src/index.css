@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+ul {
+  list-style: none;
+ }
+ 
+ a {
+  text-decoration: none;
+ }
+
 .contenu{
   display: flex;
   flex-direction: column;
@@ -21,4 +29,12 @@ code {
 .menu{
   z-index: 1;
   position: absolute;
+  right: 0;
+  width: 14%;
+}
+
+@media (max-width: 768px) {
+  .menu{
+    width: 85%;
+  }
 }
