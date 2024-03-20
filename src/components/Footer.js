@@ -10,7 +10,7 @@ class Footer extends Component{
                         
                     </div>
                     <div className="footer-bottom">
-                        <span>© RAVELONARIVO Jovani Matthieu 2024</span>
+                        <span>© RAVELONARIVO Jovani Matthieu 2024 | GitHub : <a href="https://github.com/jovani494/portfolio.git">Jovani Portfolio</a></span>
                     </div>
                 </div>
             </footer>

@@ -13,17 +13,21 @@ class Home extends Component{
             <div className="home">
                 <div className="home-left">
                     <div className="picture">
-                        <img src={photo} className="pict"/>
+                        <img src={photo} alt="Jovani" className="pict"/>
                     </div>
 
-                    <div className="description">
-                        <h1 className="nom">RAVELONARIVO<br></br> Jovani Matthieu</h1>
-                        <p>Je suis un jeune homme âgé de {year - this.state.naissance + " ans"}</p> 
+                    <div className="description">   
+                        <div className="nom">
+                            <div className="last">RAVELONARIVO</div><div className="first">Jovani Matthieu</div>
+                        </div>
+                        <p className="texte">Je suis un jeune homme âgé de {year - this.state.naissance + " ans"} passioné par 
+                            la technologie depuis mon plus jeune âge.
+                        </p> 
                     </div>
                 </div>
 
                 <div className="home-right">
-                    
+                    s
                 </div>
             </div>
         )
