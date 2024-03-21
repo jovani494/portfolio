@@ -12,8 +12,8 @@ import Certificate from "./pages/Certificate";
 import "./index.css";
 
 class App extends Component {
-
   render(){
+    console.log("gay lord ela ry Loïc")
     return (
       <Router>
         <main className="App contenu">
