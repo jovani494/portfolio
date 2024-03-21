@@ -31,6 +31,9 @@ class Home extends Component{
                             <div className="nom">
                                 <div className="last">RAVELONARIVO</div><div className="first">Jovani Matthieu</div>
                             </div>
+                            <div className="webdevelop">
+                                <h2>Web Developer</h2>
+                            </div>
                             <p className="texte">I'm a {year - this.state.naissance + "-year-old"} man who's been passionate about
                             technology since I was very young.
                             </p> 
@@ -41,7 +44,7 @@ class Home extends Component{
                         {this.state.links.map((link,index) => {
                             return(
                                 <div key={index} className="profile">
-                                    <a className="link_name" href={link.lien}><span>{link.icon}</span> {link.name}</a>
+                                    <a className="link_name" href={link.lien}>{link.icon}  {link.name}</a>
                                 </div>
                             ) 
                         })}

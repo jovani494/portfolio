@@ -42,7 +42,7 @@ class NavBar extends Component{
                         {this.state.pages.map((page, index) => {
                             return(
                               <li key={index} className="nav__item">
-                                <NavLink to={page.link} className="nav__link">
+                                <NavLink to={page.link} onClick={this.hideList} className="nav__link">
                                   <div className="item">
                                     <div className="icon">{page.icon}</div><div className="name">{page.name}</div>
                                   </div> 
