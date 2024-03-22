@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaCode , FaMicrophoneAlt  } from "react-icons/fa";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { GiMusicalNotes , GiGrandPiano  } from "react-icons/gi";
-import "./Activities.css";
+import "../../assets/css/Activities.css";
 
 const Acticities = () => {
     const [activites, setActivites] =  useState([

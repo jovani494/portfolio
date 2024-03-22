@@ -2,15 +2,17 @@ import { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { IoClose, IoMenu, IoHome } from "react-icons/io5";
 import { FaTasks } from "react-icons/fa";
+import { FaSchool } from "react-icons/fa6";
 import { VscBeaker } from "react-icons/vsc";
 import { PiCertificateFill } from "react-icons/pi";
 import { MdForwardToInbox } from "react-icons/md";
-import "./Navbar.css"
+import "../assets/css/Navbar.css"
 
 class NavBar extends Component{
     state = {
         pages : [
           { name : "Home", link : "/", icon : <IoHome  />} ,
+          { name : "Cursus", link : "/cursus", icon : <FaSchool  />} ,
           { name : "Projects", link : "/projects", icon : <FaTasks /> } ,
           { name : "Skills" , link : "/skills" , icon : <VscBeaker />} ,
           { name : "Certificate" , link : "/certificate" , icon : <PiCertificateFill />} ,

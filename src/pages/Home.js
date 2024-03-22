@@ -1,6 +1,6 @@
 import { Component } from "react";
-import './Home.css';
-import photo from "../photo.jpeg";
+import '../assets/css/Home.css';
+import photo from "../assets/image/photo.jpeg";
 import Acticities from "../components/Home/Activities";
 import { FaLinkedin , FaFacebook , FaGithub  } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
